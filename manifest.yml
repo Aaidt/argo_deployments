@@ -10,3 +10,16 @@ spec:
     ports:
     - containerPort: 80
   restartPolicy: Never
+  ---
+  apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+  namespace: default
+spec:
+  containers:
+  - name: test-container
+    image: httpd:latest
+    ports:
+    - containerPort: 80
+  restartPolicy: Never
